@@ -1,10 +1,14 @@
 import express from 'express';
+import morgan from 'morgan';
 const app = express();
 
 //setting
+app.set('port', process.env.PORT || 3000);
 
 // middleware
+app.use(morgan('dev'));
+app.use(express.json());
 
-app.listen(3000, () => {
-    console.log('server on port 3000');
+app.listen(app.get('port'), () => {
+    console.log(`server on port ${app.get('port')}`);
 });
