@@ -5,8 +5,11 @@
     "main": "index.js",
     "scripts": {
         "ts:node": "ts-node src/index.ts",
-        "start": "node build/src/",
-        "dev": "nodemon"
+        "start": "node build/src/index.js",
+        "dev": "nodemon",
+        "tsc": "tsc",
+        "lint": " eslint",
+        "tsc:server": "tsc && rsync -a ./src/data ./build/src/ && npm run start"
     },
     "keywords": [],
     "author": "",
