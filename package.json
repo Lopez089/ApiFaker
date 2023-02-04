@@ -3,7 +3,6 @@
     "version": "1.0.0",
     "description": "",
     "main": "index.js",
-    "sourceType": "module",
     "scripts": {
         "ts:node": "ts-node src/index.ts",
         "start": "node build/src/index.js",
