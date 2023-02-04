@@ -3,7 +3,7 @@ const dataJobs = require('../data/dataJobs.json');
 
 const router = express.Router();
 
-router.get('/', (req, res) => {
+router.get('/', (_req, res) => {
     res.send({ dataJobs });
 });
 

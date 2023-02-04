@@ -32,7 +32,7 @@
         }
     },
     "lint-staged": {
-        "*.js": "eslint --cache --fix"
+        "*": "eslint --cache --fix"
     },
     "dependencies": {
         "@types/morgan": "^1.9.1",
