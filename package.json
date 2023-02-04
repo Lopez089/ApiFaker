@@ -3,12 +3,13 @@
     "version": "1.0.0",
     "description": "",
     "main": "index.js",
+    "sourceType": "module",
     "scripts": {
         "ts:node": "ts-node src/index.ts",
         "start": "node build/src/index.js",
         "dev": "nodemon",
         "tsc": "tsc",
-        "lint": " eslint",
+        "lint": "eslint",
         "tsc:server": "tsc && rsync -a ./src/data ./build/src/ && npm run start"
     },
     "keywords": [],
@@ -20,6 +21,7 @@
         "eslint-config-prettier": "^6.11.0",
         "eslint-plugin-prettier": "^3.1.4",
         "husky": "^4.2.5",
+        "lint-staged": "^13.1.0",
         "morgan": "^1.10.0",
         "nodemon": "^2.0.4",
         "prettier": "^2.0.5",
@@ -35,7 +37,11 @@
         "*": "eslint --cache --fix"
     },
     "dependencies": {
+        "@types/cors": "^2.8.13",
         "@types/morgan": "^1.9.1",
-        "express": "^4.17.1"
+        "cors": "^2.8.5",
+        "express": "^4.17.1",
+        "i": "^0.3.7",
+        "npm": "^9.4.1"
     }
 }
