@@ -28,14 +28,6 @@
         "ts-node": "^8.10.2",
         "typescript": "^3.9.5"
     },
-    "husky": {
-        "hooks": {
-            "pre-commit": "lint-staged"
-        }
-    },
-    "lint-staged": {
-        "*": "eslint --cache --fix"
-    },
     "dependencies": {
         "@types/cors": "^2.8.13",
         "@types/morgan": "^1.9.1",
