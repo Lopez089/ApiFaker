@@ -1,6 +1,6 @@
 import express from 'express';
 import morgan from 'morgan';
-import router from './routes/jobsRouter';
+import { empoints, jobsRouter } from './routes';
 const app = express();
 
 //setting
@@ -11,7 +11,8 @@ app.use(morgan('dev'));
 app.use(express.json());
 
 //Router
-app.use('/api/jobs', router);
+app.use('/', empoints)
+app.use('/api/jobs', jobsRouter);
 
 app.listen(app.get('port'), () => {
     console.log(`server on port ${app.get('port')}`);
