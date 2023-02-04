@@ -8,7 +8,7 @@
         "ts:node": "ts-node src/index.ts",
         "start": "node build/src/index.js",
         "dev": "nodemon",
-        "tsc": "tsc",
+        "tsc": "tsc && rsync -a ./src/data ./build/src/",
         "lint": "eslint",
         "tsc:server": "tsc && rsync -a ./src/data ./build/src/ && npm run start"
     },
